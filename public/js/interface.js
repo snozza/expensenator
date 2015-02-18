@@ -33,6 +33,7 @@ $(document).ready(function() {
 
 $('#project_name').change(function() {
     var codes = {"MOD": '000', "Sotchi": '111', "World Line": '222'};
+    console.log('hello')
     $("#project_code").val(codes[$(this).val()]);
     console.log($('#project_name option:selected').text())
     });
