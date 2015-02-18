@@ -3,5 +3,5 @@ get '/' do
 end
 
 post '/' do
-  true
+  params.to_json
 end
