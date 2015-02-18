@@ -25,3 +25,9 @@ li {
 button {
 	color: black !important;
 }
+
+form {
+	width: 50em;
+	padding: 2em;
+	margin: 0 auto;
+}
