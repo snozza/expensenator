@@ -1,17 +1,25 @@
 body {
 	background: #222;
-	color: #EEE;
+	color: navy;
 	font: 1.5rem Arial, Verdana, Sans-Serif;
 	margin: 0;
 	padding: 5%;
 	text-align: center;
 }
-              
+
+h1 {
+	color: #EEEEEE;
+}
+
 a {
 	margin: 10%;
 	font-size: 1rem;
 	font-weight: 700;
 	color: #EEE;
+}
+
+li {
+	color: white;
 }
 
 button {

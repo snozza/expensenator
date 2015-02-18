@@ -3,9 +3,7 @@ require './app/server'
 require 'capybara/rspec'
 
 Capybara.app = Sinatra::Application
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
-end
+Capybara.default_driver = :selenium
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
