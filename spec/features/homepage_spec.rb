@@ -22,7 +22,6 @@ feature 'Submiting a new expense' do
   end
 
   scenario 'request summary appears on page after submission', js: true do
-    fill_in "employee_id", with: "1"
     fill_in "amount", with: "1000"
     select("taxi", from: "category")
     fill_in "description", with: "Some Great Food"

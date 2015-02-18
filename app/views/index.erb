@@ -1,12 +1,18 @@
 <h1>New Expenses!</h1>
+<div id="alert" class="sticky" style="display:none">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Alert Message</strong> Alert Message.
+</div>
 <p>Submit your expense</p>
 <form id="new_expenses" action ="" method="POST">
       <p>
-        <select name="project_code" id="project_code">
+        <select name="project_name" id="project_name">
+        <option value="Default">Select Project</option>
         <option value="MOD">Ministry of Defence</option>
         <option value="Sotchi">Sotchi</option>
         <option value="World Line">World Line</option>
       </p>
+      <input type="text" id="project_code" placeholder="project code" name="project_code">
       <input type="text" id="amount" placeholder="Amount" name="amount">
       <select name="currency" id="currency">
         <option value="GBP">GBP</option>
@@ -69,17 +75,19 @@
         <option value="air_travel">Air travel</option>
         <option value="rail">Rail</option>
         <option value="lunch">Lunch</option>
+        <option value="breakfast">Breakfast</option>
         <option value="hotel">Hotel</option>
         <option value="evening_meal">Evening meal</option>
       </select>
       <input type="text" id="description" placeholder="description" name="description">
       <p>
       <select name="city" id="city">
+        <option value="default">Choose City</option>
         <option value="London">London</option>
         <option value="Paris">Paris</option>
         <option value="New York">New York</option>
       </select>
-      <input type="text" id="country" placeholder="UK">
+      <input type="text" id="country" placeholder="country">
       </p>
       <p><input type="submit" id="submit" name="Submit expense"></p>
 </form>

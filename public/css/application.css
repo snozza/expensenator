@@ -25,3 +25,14 @@ li {
 button {
 	color: black !important;
 }
+
+.sticky{
+		color: black;
+		background: white;
+    position:fixed;
+    top:51px;
+    width:90%;
+    z-index:100;
+    text-align: center;
+    margin: 0 auto;
+}
