@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
 
@@ -11,7 +11,12 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="col-lg-6">
+<div id="alert" class="sticky" style="display:none">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Alert Message</strong> Alert Message.
+</div>
+
+<div class="col-lg-6 small">
   <div class="well bs-component">
     <form class="form-horizontal text-center" id="new_expenses" action="" method="POST">
       <fieldset>
@@ -21,14 +26,13 @@
           <label for="select" class="col-lg-2 control-label">Client</label>
             <div class="col-lg-10">
               <select class="form-control" id="project_name" name="project_name">
-                <option value="default">Choose Client</option>
+                <option value="">Choose Client</option>
                 <option value="MOD">Ministry of Defence</option>
                 <option value="Sotchi">Sotchi</option>
                 <option value="World Line">World Line</option>
               </select>
               <label class="col-lg-2 control-label">Project Code</label>
               <input type="text" id="project_code" placeholder="project code" name="project_code">
-
             </div>
         </div>
 
@@ -127,7 +131,7 @@
           <label for="category" class="col-lg-2 control-label">City</label>
           <div class="col-lg-10">
             <select class="form-control" id="city" name="city">
-              <option value="default">Choose City</option>
+              <option value="">Choose City</option>
               <option value="London">London</option>
               <option value="Paris">Paris</option>
               <option value="New York">New York</option>

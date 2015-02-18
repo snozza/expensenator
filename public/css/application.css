@@ -1,6 +1,6 @@
 body {
-	background: #222;
-	color: navy;
+	background: #A3BFD2;
+	/*color: navy;*/
 	font: 1.5rem Arial, Verdana, Sans-Serif;
 	margin: 0 auto;
 	padding: 5%;
@@ -18,6 +18,11 @@ a {
 	color: #EEE;
 }
 
+.small {
+  width:70%;
+  margin: 0 auto;
+}
+
 li {
 	color: white;
 }
@@ -25,7 +30,6 @@ li {
 button {
 	color: black !important;
 }
-
 
 .sticky{
 		color: black;
@@ -37,8 +41,17 @@ button {
     text-align: center;
     margin: 0 auto;
 }
+.navbar-brand {
+	padding: 0em 2em;
+
+}
 
 #logo {
-	padding: 0;
+	border: gray;
 	height: 3em;
+}
+
+form {
+	/*margin: 0 auto;*/
+	text-align: center;
 }
