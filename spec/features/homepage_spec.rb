@@ -23,9 +23,9 @@ feature 'Submiting a new expense' do
 
   scenario 'request summary appears on page after submission', js: true do
     fill_in "amount", with: "1000"
-    select("taxi", from: "category")
-    fill_in "description", with: "Some Great Food"
-    click_button 'submit'
+    select("Taxi", from: "category")
+    fill_in "description", with: "Needed to get somewhere"
+    click_button '#new-expense'
     expect(find('.expense_item').text).to include '1000'
   end
 
