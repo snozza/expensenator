@@ -1,3 +1,17 @@
+/*============================================Navbar=================================================*/
+.navbar {
+  background: white;
+}
+
+.navbar-brand {
+  padding: 0em 2em;
+}
+
+#logo {
+  height: 3em;
+}
+
+/*============================================Body=================================================*/
 body {
   background: #067BD0;
   font: 1.5rem Arial, Verdana, Sans-Serif;
@@ -10,10 +24,7 @@ a {
   color: #EEE;
 }
 
-li {
-  color: white;
-}
-
+/*============================================Alert=================================================*/
 .sticky{
   color: black;
   background: #A3BFD2;
@@ -26,16 +37,4 @@ li {
   text-align: center;
   margin: 0 auto;
   font-size:2em;
-}
-
-.navbar {
-  background: white;
-}
-
-.navbar-brand {
-  padding: 0em 2em;
-}
-
-#logo {
-  height: 3em;
 }
