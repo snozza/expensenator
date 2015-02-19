@@ -13,9 +13,7 @@ $(document).ready(function() {
     console.log($(this).serialize());
     $.post('/', $('form').serialize(), function(data) {
       var data = JSON.parse(data);
-      // $('#expenses_list').append('<li class="expense_item">Expense Type: ' + data['category'] +
-      //   ' Amount: ' + data['amount'] + ' Currency: ' + data['currency'] + ' Date: ' + data['day'] + ' '
-      //   + data['month'] + ' ' + data['year']);
+
       $('#expenses_table').append("<tr><td>" + data['project_name'] + "</td>" +
       "</td>" + "<td>" + data['project_code'] + "</td>" +
       "</td>" + "<td>" + data['amount'] + "</td>" +
@@ -25,10 +23,10 @@ $(document).ready(function() {
       "</td>" + "<td>" + data['description'] + "</td>" +
       "</td>" + "<td>" + data['city'] + "</td>" +
       "</td>" + "<td>" + data['country'] + "</td>" +
-      "</tr>");
+      "</tr>" + "</table>");
     });
 
-    $('#expenses_table').show();    
+    $('#expenses_table').show();
   });
 
 $('#project_name').change(function() {

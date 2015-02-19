@@ -1,29 +1,20 @@
+<!-- <div class="alert alert-info alert-dismissible" role="alert"> -->
+  <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+  <div id="alert" class="sticky" style="display:none">
+      <a href="#" class="close" data-dismiss="alert">&times;</a>
+      <strong>Alert Message</strong> Alert Message.
+  </div>
+<!-- </div> -->
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
+<div class="container">
+  <div class="col-lg-6 small">
+    <div class="well bs-component">
+      <form class="form-horizontal text-center" id="new_expenses" action="" method="POST">
+        <fieldset>
+          <legend>New Expense</legend>
 
-      <a class="navbar-brand" href="#">
-        <img alt="Atos" id="logo" src="images/atoslogo_rgb.jpg">
-      </a>
-    </div>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div id="alert" class="sticky" style="display:none">
-    <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Alert Message</strong> Alert Message.
-</div>
-
-<div class="col-lg-6 small">
-  <div class="well bs-component">
-    <form class="form-horizontal text-center" id="new_expenses" action="" method="POST">
-      <fieldset>
-        <legend>New Expense</legend>
-
-        <div class="form-group">
-          <label for="select" class="col-lg-2 control-label">Client</label>
+          <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Client</label>
             <div class="col-lg-10">
               <select class="form-control" id="project_name" name="project_name">
                 <option value="">Choose Client</option>
@@ -31,94 +22,111 @@
                 <option value="Sotchi">Sotchi</option>
                 <option value="World Line">World Line</option>
               </select>
-              <label class="col-lg-2 control-label">Project Code</label>
-              <input type="text" id="project_code" placeholder="project code" name="project_code">
             </div>
-        </div>
-
-        <div class="form-group">
-          <label for="amount" class="col-lg-2 control-label">Amount</label>
-          <div class="col-lg-10">
-            <input type="text" class="form-control" id="amount" placeholder="Amount" name="amount">
-            <!-- <label for="amount" class="col-lg-2 control-label">Currency</label> -->
-            <select class="form-control" id="currency" name="currency">
-              <option value="GBP">GBP</option>
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-            </select>
           </div>
-        </div>
-
-        <div class="form-group">
-          <label for="day" class="col-lg-2 control-label">Date</label>
-          <div class="col-lg-10">
-            <select class="form-control" id="day" name="day">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-            </select>
-            <select class="form-control" id="month" name="month">
-              <option value="January">January</option>
-              <option value="Febuary">Febuary</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="December">December</option>
-            </select>
-            <select class="form-control" name="year" id="year">
-              <option value="2015">2015</option>
-              <option value="2014">2014</option>
-            </select>
+          <div class="form-group">
+            <label class="col-lg-2 control-label">Project Code</label>
+              <div class="col-lg-10">
+              <input type="text" class="form-control" id="project_code" placeholder="Project code" name="project_code">
+              </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="category" class="col-lg-2 control-label">Category</label>
-          <div class="col-lg-10">
-            <select class="form-control" id="category" name="category">
-              <option value="taxi">Taxi</option>
-              <option value="air_travel">Air travel</option>
-              <option value="rail">Rail</option>
-              <option value="lunch">Lunch</option>
-              <option value="hotel">Hotel</option>
-              <option value="evening_meal">Evening meal</option>
-            </select>
+          <div class="form-group">
+            <label for="amount" class="col-md-2 control-label">Amount</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="amount" placeholder="Amount" name="amount">
+            </div>
+              <!-- <label for="currency" class="col-lg-2 control-label">Currency</label> -->
+            <div class="col-md-4">
+              <select class="form-control" id="currency" name="currency">
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+              </select>
+            </div>
           </div>
-        </div>
+
+          <div class="form-group">
+            <label for="day" class="col-lg-2 control-label">Date</label>
+            <div class="col-lg-10">
+              <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="day" class="col-lg-2 control-label">Date</label>
+            <div class="col-lg-3">
+              <select class="form-control" id="day" name="day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+            </div>
+            <div class="col-lg-4">
+              <select class="form-control" id="month" name="month">
+                <option value="January">January</option>
+                <option value="Febuary">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+            </div>
+            <div class="col-lg-3">
+              <select class="form-control" name="year" id="year">
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="category" class="col-lg-2 control-label">Category</label>
+            <div class="col-lg-10">
+              <select class="form-control" id="category" name="category">
+                <option value="taxi">Taxi</option>
+                <option value="air_travel">Air travel</option>
+                <option value="rail">Rail</option>
+                <option value="lunch">Lunch</option>
+                <option value="hotel">Hotel</option>
+                <option value="evening_meal">Evening meal</option>
+              </select>
+            </div>
+          </div>
 
         <div class="form-group">
           <label for="description" class="col-lg-2 control-label">Description</label>
@@ -129,45 +137,56 @@
 
         <div class="form-group">
           <label for="category" class="col-lg-2 control-label">City</label>
-          <div class="col-lg-10">
+          <div class="col-lg-5">
             <select class="form-control" id="city" name="city">
               <option value="">Choose City</option>
               <option value="London">London</option>
               <option value="Paris">Paris</option>
               <option value="New York">New York</option>
             </select>
+          </div>
+          <div class="col-lg-5">
             <input type="text" class="form-control" id="country" placeholder="Country" name="country">
           </div>
         </div>
 
         <div class="form-group">
           <label for="image" class="col-lg-2 control-label">Receipt Image</label>
+          <div class="col-lg-4">
           <input id="receiptImg" name="receiptImg" type="file" />
+          </div>
         </div>
 
         <div class="form-group">
           <div class="col-lg-10 col-lg-offset-2">
-            <button type="submit" class="btn btn-primary">Submit Claim</button>
+            <button type="submit" class="btn btn-success">Submit Claim</button>
             <button type="submit" class="btn btn-primary">Add New Expense</button>
+          </div>
         </div>
 
-      </fieldset>
-    </form>
+        </fieldset>
+      </form>
+    </div>
   </div>
 </div>
 
-  <table class="table" id="expenses_table">
-  <thead>
-  <tr>
-    <th><strong>Project code</strong></th>
-    <th><strong>Amount</strong></th>
-    <th><strong>Project code</strong></th>
-    <th><strong>Currency</strong></th>
-    <th><strong>Date</strong></th>
-    <th><strong>Category</strong></th>
-    <th><strong>Description</strong></th>
-    <th><strong>City</strong></th>
-    <th><strong>Country</strong></th>
-  </tr>
-  </thead>
-</table>
+<div class="panel panel-primary" id="expenses_table">
+  <div class="panel-heading">
+    <h3 class="panel-title">Your Expenses</h3>
+  </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><strong>Project code</strong></th>
+          <th><strong>Amount</strong></th>
+          <th><strong>Project code</strong></th>
+          <th><strong>Currency</strong></th>
+          <th><strong>Date</strong></th>
+          <th><strong>Category</strong></th>
+          <th><strong>Description</strong></th>
+          <th><strong>City</strong></th>
+          <th><strong>Country</strong></th>
+        </tr>
+      </thead>
+    </table>
+</div>
