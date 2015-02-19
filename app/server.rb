@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/partial'
 require 'json'
+require 'base64'
 
 require_relative './controllers/application'
 
