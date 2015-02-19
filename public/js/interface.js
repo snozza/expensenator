@@ -12,7 +12,8 @@ $(document).ready(function() {
     event.preventDefault();
     $.post('/', $('form').serialize(), function(data) {
       var data = JSON.parse(data);
-      $('#expenses_table').append("<tr class='expense_item'><td>" + data['project_name'] + "</td>" +
+
+      $('#expenses_table').append("<tr><td>" + data['project_name'] + "</td>" +
       "</td>" + "<td>" + data['project_code'] + "</td>" +
       "</td>" + "<td>" + data['amount'] + "</td>" +
       "</td>" + "<td>" + data['currency'] + "</td>" +
@@ -21,10 +22,10 @@ $(document).ready(function() {
       "</td>" + "<td>" + data['description'] + "</td>" +
       "</td>" + "<td>" + data['city'] + "</td>" +
       "</td>" + "<td>" + data['country'] + "</td>" +
-      "</tr>");
+      "</tr>" + "</table>");
     });
 
-    $('#expenses_table').show();    
+    $('#expenses_table').show();
   });
 
   $('#project_name').change(function() {
